@@ -1,15 +1,24 @@
+// Import necessary React libraries
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+// Create a root element for React to render into
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-function clickLog() {
-  console.log('clicked');
-}
-function overLog() {
-  console.log('Mouse over');
-}
-const inputField = <input placeholder="Help text"
-  onClick={clickLog} onMouseEnter={overLog}/>;
+// Event handler functions
+const clickLog = () => console.log('clicked');
+const overLog = () => console.log('Mouse over');
 
+// Placeholder text for input field
+const text = 'Help text';
+
+// Create input component with event handlers
+const inputField = (
+  <div>
+    <input placeholder={text}
+    onClick={clickLog} onMouseEnter={overLog}/>
+  </div>
+);
+
+// Render the input field component to the DOM
 root.render(inputField);
