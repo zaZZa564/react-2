@@ -17,6 +17,9 @@ const inputField = (
   <div>
     <input placeholder={text}
     onClick={clickLog} onMouseEnter={overLog}/>
+    <p>
+      {text == 'Help me please, im starving'? "yes" : "no"}
+      </p>
   </div>
 );
 
